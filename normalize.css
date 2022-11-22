@@ -1,0 +1,25 @@
+/* normalize styles */
+html, body, p, h1 {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+	font-family: monospace, Courier;
+}
+
+/* a {
+	color: #333;
+}
+a:hover {
+	color: #345;
+} */
+
+button {
+	cursor: pointer;
+}
+
+#templates {
+	display: none;
+}
