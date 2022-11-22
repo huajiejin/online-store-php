@@ -2,18 +2,31 @@
 ini_set("display_errors", "1");
 session_start();
 
-$_SESSION['name'] = $name = isset($_POST["name"]) ? trim($_POST["name"]) : "";
-$_SESSION['phone'] = $phone = isset($_POST["phone"]) ? trim($_POST["phone"]) : "";
-$_SESSION['postcode'] = $postcode = isset($_POST["postcode"]) ? trim($_POST["postcode"]) : "";
-$_SESSION['address'] = $address = isset($_POST["address"]) ? trim($_POST["address"]) : "";
-$_SESSION['city'] = $city = isset($_POST["city"]) ? trim($_POST["city"]) : "";
-$_SESSION['province'] = $province = isset($_POST["province"]) ? trim($_POST["province"]) : "";
-$_SESSION['creditCard'] = $creditCard = isset($_POST["creditCard"]) ? trim($_POST["creditCard"]) : "";
-$_SESSION['creditCardExpiryMonth'] = $creditCardExpiryMonth = isset($_POST["creditCardExpiryMonth"]) ? strtoupper(trim($_POST["creditCardExpiryMonth"])) : "";
-$_SESSION['creditCardExpiryYear'] = $creditCardExpiryYear = isset($_POST["creditCardExpiryYear"]) ? trim($_POST["creditCardExpiryYear"]) : "";
-$_SESSION['email'] = $email = isset($_POST["email"]) ? trim($_POST["email"]) : "";
-$_SESSION['password'] = $password = isset($_POST["password"]) ? trim($_POST["password"]) : "";
-$_SESSION['confirmPassword'] = $confirmPassword = isset($_POST["confirmPassword"]) ? trim($_POST["confirmPassword"]) : "";
+$name = isset($_SESSION["name"]) ? trim($_SESSION["name"]) : "";
+$phone = isset($_SESSION["phone"]) ? trim($_SESSION["phone"]) : "";
+$postcode = isset($_SESSION["postcode"]) ? trim($_SESSION["postcode"]) : "";
+$address = isset($_SESSION["address"]) ? trim($_SESSION["address"]) : "";
+$city = isset($_SESSION["city"]) ? trim($_SESSION["city"]) : "";
+$province = isset($_SESSION["province"]) ? trim($_SESSION["province"]) : "";
+$creditCard = isset($_SESSION["creditCard"]) ? trim($_SESSION["creditCard"]) : "";
+$creditCardExpiryMonth = isset($_SESSION["creditCardExpiryMonth"]) ? strtoupper(trim($_SESSION["creditCardExpiryMonth"])) : "";
+$creditCardExpiryYear = isset($_SESSION["creditCardExpiryYear"]) ? trim($_SESSION["creditCardExpiryYear"]) : "";
+$email = isset($_SESSION["email"]) ? trim($_SESSION["email"]) : "";
+$password = isset($_SESSION["password"]) ? trim($_SESSION["password"]) : "";
+$confirmPassword = isset($_SESSION["confirmPassword"]) ? trim($_SESSION["confirmPassword"]) : "";
+
+$_SESSION['name'] = $name = isset($_POST["name"]) ? trim($_POST["name"]) : $name;
+$_SESSION['phone'] = $phone = isset($_POST["phone"]) ? trim($_POST["phone"]) : $phone;
+$_SESSION['postcode'] = $postcode = isset($_POST["postcode"]) ? trim($_POST["postcode"]) : $postcode;
+$_SESSION['address'] = $address = isset($_POST["address"]) ? trim($_POST["address"]) : $address;
+$_SESSION['city'] = $city = isset($_POST["city"]) ? trim($_POST["city"]) : $city;
+$_SESSION['province'] = $province = isset($_POST["province"]) ? trim($_POST["province"]) : $province;
+$_SESSION['creditCard'] = $creditCard = isset($_POST["creditCard"]) ? trim($_POST["creditCard"]) : $creditCard;
+$_SESSION['creditCardExpiryMonth'] = $creditCardExpiryMonth = isset($_POST["creditCardExpiryMonth"]) ? strtoupper(trim($_POST["creditCardExpiryMonth"])) : $creditCardExpiryMonth;
+$_SESSION['creditCardExpiryYear'] = $creditCardExpiryYear = isset($_POST["creditCardExpiryYear"]) ? trim($_POST["creditCardExpiryYear"]) : $creditCardExpiryYear;
+$_SESSION['email'] = $email = isset($_POST["email"]) ? trim($_POST["email"]) : $email;
+$_SESSION['password'] = $password = isset($_POST["password"]) ? trim($_POST["password"]) : $password;
+$_SESSION['confirmPassword'] = $confirmPassword = isset($_POST["confirmPassword"]) ? trim($_POST["confirmPassword"]) : $confirmPassword;
 
 $nameInvalid = false;
 $phoneInvalid = false;
