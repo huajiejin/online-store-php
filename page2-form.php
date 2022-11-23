@@ -14,6 +14,8 @@ $creditCardExpiryYear = isset($_SESSION["creditCardExpiryYear"]) ? trim($_SESSIO
 $email = isset($_SESSION["email"]) ? trim($_SESSION["email"]) : "";
 $password = isset($_SESSION["password"]) ? trim($_SESSION["password"]) : "";
 $confirmPassword = isset($_SESSION["confirmPassword"]) ? trim($_SESSION["confirmPassword"]) : "";
+var_dump($province);
+echo "<br />";
 
 $_SESSION['name'] = $name = isset($_POST["name"]) ? trim($_POST["name"]) : $name;
 $_SESSION['phone'] = $phone = isset($_POST["phone"]) ? trim($_POST["phone"]) : $phone;
@@ -21,6 +23,8 @@ $_SESSION['postcode'] = $postcode = isset($_POST["postcode"]) ? trim($_POST["pos
 $_SESSION['address'] = $address = isset($_POST["address"]) ? trim($_POST["address"]) : $address;
 $_SESSION['city'] = $city = isset($_POST["city"]) ? trim($_POST["city"]) : $city;
 $_SESSION['province'] = $province = isset($_POST["province"]) ? trim($_POST["province"]) : $province;
+var_dump($province);
+echo "<br />";
 $_SESSION['creditCard'] = $creditCard = isset($_POST["creditCard"]) ? trim($_POST["creditCard"]) : $creditCard;
 $_SESSION['creditCardExpiryMonth'] = $creditCardExpiryMonth = isset($_POST["creditCardExpiryMonth"]) ? strtoupper(trim($_POST["creditCardExpiryMonth"])) : $creditCardExpiryMonth;
 $_SESSION['creditCardExpiryYear'] = $creditCardExpiryYear = isset($_POST["creditCardExpiryYear"]) ? trim($_POST["creditCardExpiryYear"]) : $creditCardExpiryYear;
@@ -116,20 +120,20 @@ if (isset($_POST['submit'])) {
 			</section>
 			<section class="form-item">
 				<span>Province</span>
-				<select name="province" value="<?php echo $province ?>">
-					<option value="Alberta">Alberta</option>
-					<option value="British Columbia">British Columbia</option>
-					<option value="Manitoba">Manitoba</option>
-					<option value="New Brunswick">New Brunswick</option>
-					<option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
-					<option value="Northwest Territories">Northwest Territories</option>
-					<option value="Nova Scotia">Nova Scotia</option>
-					<option value="Nunavut">Nunavut</option>
-					<option value="Ontario">Ontario</option>
-					<option value="Prince Edward Island">Prince Edward Island</option>
-					<option value="Quebec">Quebec</option>
-					<option value="Saskatchewan">Saskatchewan</option>
-					<option value="Yukon">Yukon</option>
+				<select name="province">
+					<option value="Alberta" <?php echo $province == "Alberta" ? "selected" : "" ?>>Alberta</option>
+					<option value="British Columbia" <?php echo $province == "British Columbia" ? "selected" : "" ?>>British Columbia</option>
+					<option value="Manitoba" <?php echo $province == "Manitoba" ? "selected" : "" ?>>Manitoba</option>
+					<option value="New Brunswick" <?php echo $province == "New Brunswick" ? "selected" : "" ?>>New Brunswick</option>
+					<option value="Newfoundland and Labrador" <?php echo $province == "Newfoundland and Labrador" ? "selected" : "" ?>>Newfoundland and Labrador</option>
+					<option value="Northwest Territories" <?php echo $province == "Northwest Territories" ? "selected" : "" ?>>Northwest Territories</option>
+					<option value="Nova Scotia" <?php echo $province == "Nova Scotia" ? "selected" : "" ?>>Nova Scotia</option>
+					<option value="Nunavut" <?php echo $province == "Nunavut" ? "selected" : "" ?>>Nunavut</option>
+					<option value="Ontario" <?php echo $province == "Ontario" ? "selected" : "" ?>>Ontario</option>
+					<option value="Prince Edward Island" <?php echo $province == "Prince Edward Island" ? "selected" : "" ?>>Prince Edward Island</option>
+					<option value="Quebec" <?php echo $province == "Quebec" ? "selected" : "" ?>>Quebec</option>
+					<option value="Saskatchewan" <?php echo $province == "Saskatchewan" ? "selected" : "" ?>>Saskatchewan</option>
+					<option value="Yukon" <?php echo $province == "Yukon" ? "selected" : "" ?>>Yukon</option>
 				</select>
 				<p class="error-message <?php echo $provinceInvalid ? '' : 'hidden' ?>">Province is required</p>
 			</section>
