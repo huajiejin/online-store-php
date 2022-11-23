@@ -14,8 +14,6 @@ $creditCardExpiryYear = isset($_SESSION["creditCardExpiryYear"]) ? trim($_SESSIO
 $email = isset($_SESSION["email"]) ? trim($_SESSION["email"]) : "";
 $password = isset($_SESSION["password"]) ? trim($_SESSION["password"]) : "";
 $confirmPassword = isset($_SESSION["confirmPassword"]) ? trim($_SESSION["confirmPassword"]) : "";
-var_dump($province);
-echo "<br />";
 
 $_SESSION['name'] = $name = isset($_POST["name"]) ? trim($_POST["name"]) : $name;
 $_SESSION['phone'] = $phone = isset($_POST["phone"]) ? trim($_POST["phone"]) : $phone;
@@ -23,8 +21,6 @@ $_SESSION['postcode'] = $postcode = isset($_POST["postcode"]) ? trim($_POST["pos
 $_SESSION['address'] = $address = isset($_POST["address"]) ? trim($_POST["address"]) : $address;
 $_SESSION['city'] = $city = isset($_POST["city"]) ? trim($_POST["city"]) : $city;
 $_SESSION['province'] = $province = isset($_POST["province"]) ? trim($_POST["province"]) : $province;
-var_dump($province);
-echo "<br />";
 $_SESSION['creditCard'] = $creditCard = isset($_POST["creditCard"]) ? trim($_POST["creditCard"]) : $creditCard;
 $_SESSION['creditCardExpiryMonth'] = $creditCardExpiryMonth = isset($_POST["creditCardExpiryMonth"]) ? strtoupper(trim($_POST["creditCardExpiryMonth"])) : $creditCardExpiryMonth;
 $_SESSION['creditCardExpiryYear'] = $creditCardExpiryYear = isset($_POST["creditCardExpiryYear"]) ? trim($_POST["creditCardExpiryYear"]) : $creditCardExpiryYear;
