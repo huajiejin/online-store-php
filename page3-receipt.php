@@ -101,18 +101,18 @@ if ($TotalBeforeTax <10){
 				<p>Total Price After Tax: $<?php echo $TotaLAfterTax?></p>
 
 				<h4>Form Data From Page 2</h4>
-				<p>name: Hello</p>
-				<p>phone: 1</p>
-				<p>postcode: 12</p>
-				<p>address: 12</p>
-				<p>city: 12</p>
-				<p>province: asdf</p>
-				<p>creditCard: 1234123443214321</p>
-				<p>creditCardExpiryMonth: SEP</p>
-				<p>creditCardExpiryYear: 2000</p>
-				<p>email: gf565@gmail.com</p>
-				<p>password: 1234</p>
-				<p>confirmPassword: 1234</p>
+				<p>name: <?php echo $name ?></p>
+				<p>phone: <?php echo $phone ?></p>
+				<p>postcode: <?php echo $postcode ?></p>
+				<p>address: <?php echo $address ?></p>
+				<p>city: <?php echo $city ?></p>
+				<p>province: <?php echo $province ?></p>
+				<p>creditCard: <?php echo $creditCard ?></p>
+				<p>creditCardExpiryMonth: <?php echo $creditCardExpiryMonth ?></p>
+				<p>creditCardExpiryYear: <?php echo $creditCardExpiryYear ?></p>
+				<p>email: <?php echo $email ?></p>
+				<p>password: <?php echo $password ?></p>
+				<p>confirmPassword: <?php echo $confirmPassword ?></p>
 			</section>
 			<!-- Display error message under proper condition -->
 			<section class="error-message"><?php if($TotalBeforeTax <10) { echo "the minimum purchase should not be less than $10."; }?></section>
